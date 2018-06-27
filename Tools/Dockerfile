@@ -40,3 +40,7 @@ RUN set -ex \
       /usr/share/man \
       /usr/share/doc \
       /usr/share/doc-base
+
+COPY assets/entrypoint.sh /entrypoint.sh
+
+CMD ["bash", "/entrypoint.sh"]

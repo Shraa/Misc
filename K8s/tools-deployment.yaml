@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: diagnostic-tools
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      io.kompose.service: diagnostic-tools
+  template:
+    metadata:
+      labels:
+        io.kompose.service: diagnostic-tools
+    spec:
+      containers:
+      - image: registry.misc.maritime.tools/diagnostic/tools:latest
+        resources:
+          requests:
+            cpu: 400m
+        name: diagnostic-tools
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: registry.misc.maritime.tools

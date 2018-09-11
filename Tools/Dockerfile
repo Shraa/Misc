@@ -2,7 +2,8 @@ FROM debian
 
 LABEL \
     version="1.0"\
-    maintainer="Aleksey Kondratyev <ronkajitsu@gmail.com>" \
+    author="Mikhail Velkin <twilight@solfoto.ru>" \
+    maintainer="Mikhail Velkin <twilight@solfoto.ru>" \
     description="Diagnostic Tools" \
     source="https://github.com/Shraa/Misc"
 
